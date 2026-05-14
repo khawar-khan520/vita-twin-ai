@@ -1,0 +1,56 @@
+[
+  {
+    "user_id": 1,
+    "date": "2026-05-01",
+    "mood": "neutral",
+    "stress_level": 4,
+    "sleep_hours": 7,
+    "journal": "Had a productive day and felt okay overall.",
+    "activity": "worked and exercised"
+  },
+  {
+    "user_id": 1,
+    "date": "2026-05-02",
+    "mood": "low",
+    "stress_level": 7,
+    "sleep_hours": 5,
+    "journal": "Feeling exhausted and overwhelmed with work.",
+    "activity": "minimal social interaction"
+  },
+  {
+    "user_id": 1,
+    "date": "2026-05-03",
+    "mood": "low",
+    "stress_level": 8,
+    "sleep_hours": 4,
+    "journal": "Could not focus today and felt emotionally drained.",
+    "activity": "isolated at home"
+  },
+  {
+    "user_id": 1,
+    "date": "2026-05-04",
+    "mood": "negative",
+    "stress_level": 9,
+    "sleep_hours": 3,
+    "journal": "Feeling mentally exhausted and disconnected.",
+    "activity": "avoided social interaction"
+  },
+  {
+    "user_id": 1,
+    "date": "2026-05-05",
+    "mood": "negative",
+    "stress_level": 9,
+    "sleep_hours": 4,
+    "journal": "High stress and low motivation throughout the day.",
+    "activity": "stayed indoors"
+  },
+  {
+    "user_id": 1,
+    "date": "2026-05-06",
+    "mood": "low",
+    "stress_level": 8,
+    "sleep_hours": 4,
+    "journal": "I feel stuck and unable to concentrate properly.",
+    "activity": "worked from home"
+  }
+]
