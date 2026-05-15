@@ -1,3 +1,8 @@
+import sys
+import os
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import streamlit as st
 from rag.generator import run_pipeline
 from graph.graph_builder import MentalHealthGraph
