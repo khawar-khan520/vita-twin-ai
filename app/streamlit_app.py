@@ -18,11 +18,20 @@ clicked = st.button("Analyze")
 
 if clicked:
     if query:
-        st.info("Running AI pipeline...")
+        try:
+            st.info("Running AI pipeline...")
 
-        from rag.generator import run_pipeline
+            from rag.generator import run_pipeline
 
-        result = run_pipeline(query)
+            result = run_pipeline(query)
+
+            st.write(result)
+
+        except Exception as e:
+            st.error("Pipeline crashed")
+            st.exception(e)
+
+
 
         st.subheader("📊 Risk Assessment")
         st.write(result["risk_assessment"])
