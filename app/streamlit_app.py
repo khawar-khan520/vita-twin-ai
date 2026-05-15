@@ -18,6 +18,17 @@ clicked = st.button("Analyze")
 
 if clicked:
     if query:
-        st.success(f"Query received: {query}")
+        st.info("Running AI pipeline...")
+
+        from rag.generator import run_pipeline
+
+        result = run_pipeline(query)
+
+        st.subheader("📊 Risk Assessment")
+        st.write(result["risk_assessment"])
+
+        st.subheader("🧠 Explanation")
+        st.write(result["explanation"]["summary"])
+
     else:
         st.warning("Please enter a query")
