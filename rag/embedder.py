@@ -1,10 +1,10 @@
 from sentence_transformers import SentenceTransformer
 import json
 import faiss
-import numpy as np
 
-print("Loading model...")
+from sentence_transformers import SentenceTransformer
 
+# LOAD ONCE (GLOBAL)
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
 print("Loading dataset...")
