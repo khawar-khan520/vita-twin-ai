@@ -111,7 +111,7 @@ def run_embedding_pipeline() -> None:
     print(f"[Embedder] Loaded {len(data)} entries.")
 
     print("[Embedder] Loading sentence transformer model...")
-    model = SentenceTransformer(MODEL_NAME)
+    model = SentenceTransformer("all-MiniLM-L6-v2")
 
     print("[Embedder] Building FAISS index...")
     index, metadata = build_index(data, model)

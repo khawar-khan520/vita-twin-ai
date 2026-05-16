@@ -3,14 +3,16 @@ retriever.py - FAISS-based retrieval layer for VitaTwin AI
 """
 
 import numpy as np
+import faiss
+from sentence_transformers import SentenceTransformer
 from datetime import datetime, timedelta
 from rag.embedder import load_index
 
 # ── Global cache ─────────────────────────────
-_index = None
-_metadata = None
-_model = None
 
+
+# 🔥 GLOBAL LOAD (RUNS ONCE ONLY)
+_index, _metadata, _model = load_index()
 
 def _ensure_loaded():
     global _index, _metadata, _model
@@ -23,12 +25,10 @@ def _ensure_loaded():
 
 
 # ── Main retrieval ───────────────────────────
-def retrieve(query: str, top_k: int = 5) -> list[dict]:
+def retrieve(query: str, top_k: int = 5):
 
-    _ensure_loaded()
-
-    query_vec = _model.encode(query, convert_to_numpy=True)
-    query_vec = np.array([query_vec]).astype("float32")
+    query_vec = _model.encode([query], convert_to_numpy=True)
+    query_vec = np.array(query_vec).astype("float32")
 
     distances, indices = _index.search(query_vec, top_k)
 
@@ -49,7 +49,6 @@ def retrieve(query: str, top_k: int = 5) -> list[dict]:
         results.append(entry)
 
     return results
-
 
 # ── User-based retrieval ─────────────────────
 def retrieve_by_user(user_id: str, top_k: int = 10):
@@ -120,3 +119,4 @@ if __name__ == "__main__":
     results = retrieve("stress burnout poor sleep", top_k=3)
 
     print(format_retrieved_context(results))
+
