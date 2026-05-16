@@ -26,23 +26,36 @@ if clicked:
                     st.success("Analysis complete.")
 
                     st.subheader("📊 Risk Assessment")
-                    st.write(result.get("risk_assessment", "No risk assessment returned."))
+
+                    risk = result["risk_assessment"]
+
+                    col1, col2, col3 = st.columns(3)
+
+                    with col1:
+                        st.metric("Risk Level", risk["risk_level"])
+
+                    with col2:
+                        st.metric("Avg Stress", risk["avg_stress"])
+
+                    with col3:
+                        st.metric("Avg Sleep", risk["avg_sleep"])
 
                     st.subheader("🧠 Explanation")
-                    explanation = result.get("explanation", {})
-                    if isinstance(explanation, dict):
-                        st.write(explanation.get("summary", "No summary returned."))
-                    else:
-                        st.write(explanation)
 
-                    # Show full result in expander for debugging
-                    with st.expander("Full response (debug)"):
-                        st.json(result)
+                    for reason in risk.get("reason", []):
+                        st.write("•", reason)
 
-                else:
-                    # run_pipeline returned a plain string
-                    st.success("Analysis complete.")
-                    st.write(result)
+                    st.success(result["explanation"]["summary"])
+
+                    st.subheader("📚 Retrieved Entries")
+
+                    for i, entry in enumerate(result["retrieved_entries"]):
+                        st.markdown(f"### Entry {i + 1}")
+                        st.write(f"User: {entry['user_id']}")
+                        st.write(f"Date: {entry['date']}")
+                        st.write(f"Mood: {entry['mood_score']}")
+                        st.write(f"Stress: {entry['stress_level']}")
+                        st.write("---")
 
             except ImportError as e:
                 st.error("Could not import the AI pipeline. Check your `rag/generator.py` file.")
