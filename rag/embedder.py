@@ -94,10 +94,10 @@ def load_index():
             "FAISS index not found. Run embedder.py directly first: "
             "python rag/embedder.py"
         )
-    index = faiss.read_index(INDEX_PATH)
+    index = faiss.read_index("data/faiss_index.bin")
     with open(META_PATH, "rb") as f:
         metadata = pickle.load(f)
-    model = SentenceTransformer(MODEL_NAME)
+    model = SentenceTransformer("all-MiniLM-L6-v2")
     return index, metadata, model
 
 
