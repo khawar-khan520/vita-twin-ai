@@ -4,43 +4,49 @@ from detection.risk_detector import detect_risk
 
 def run_pipeline(query):
 
-    # Step 1: Retrieve relevant mental health entries
+    # Step 1: Retrieve relevant entries
     retrieved_entries = retrieve(query)
 
-    # Step 2: Risk detection on retrieved data
+    # Step 2: Risk detection
     risk_output = detect_risk(retrieved_entries)
 
-    # Step 3: Knowledge Graph layer (EXPLAINABILITY)
-    from graph.graph_builder import MentalHealthGraph
-    kg = MentalHealthGraph()
-    graph_edges = kg.get_relationships()
-
-    # Step 4: Raw logs (for UI transparency)
-    raw_logs = retrieved_entries
-
-    # Step 5: Build explanation
+    # Step 3: Build explanation
     explanation = {
-        "summary": f"Risk level detected: {risk_output['risk_level']}",
+        "summary": f"Detected {risk_output['risk_level']} mental health risk based on stress and sleep patterns.",
         "key_factors": risk_output.get("reason", [])
     }
 
-    # Step 6: Final structured response
+    # Step 4: Simple graph insights
+    graph_edges = []
+
+    for entry in retrieved_entries:
+
+        mood = entry.get("mood", "unknown")
+        stress = entry.get("stress_level", 0)
+
+        if stress >= 7:
+            graph_edges.append(
+                f"{mood} → High Stress"
+            )
+
+    # Step 5: Final response
     response = {
         "query": query,
         "retrieved_entries": retrieved_entries,
         "risk_assessment": risk_output,
         "explanation": explanation,
         "graph_edges": graph_edges,
-        "raw_logs": raw_logs
+        "raw_logs": retrieved_entries
     }
 
     return response
 
 
-# test run
+# Local test
 if __name__ == "__main__":
-    query = "stress, burnout, low sleep"
-    output = run_pipeline(query)
 
-    print("\n=== FINAL AI INSIGHT ===\n")
-    print(output)
+    test_query = "stress burnout low sleep"
+
+    result = run_pipeline(test_query)
+
+    print(result)

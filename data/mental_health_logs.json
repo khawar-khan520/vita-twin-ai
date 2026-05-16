@@ -1,56 +1,282 @@
 [
   {
-    "user_id": 1,
-    "date": "2026-05-01",
-    "mood": "neutral",
-    "stress_level": 4,
-    "sleep_hours": 7,
-    "journal": "Had a productive day and felt okay overall.",
-    "activity": "worked and exercised"
+    "entry_id": "E001", "user_id": "U01", "date": "2024-01-01",
+    "mood_score": 7, "stress_level": 4, "sleep_hours": 7.5,
+    "energy_level": 6, "anxiety_score": 3,
+    "journal": "Felt okay today. Work was manageable. Had a good lunch break.",
+    "activities": ["exercise", "reading"], "social_interaction": "moderate"
   },
   {
-    "user_id": 1,
-    "date": "2026-05-02",
-    "mood": "low",
-    "stress_level": 7,
-    "sleep_hours": 5,
-    "journal": "Feeling exhausted and overwhelmed with work.",
-    "activity": "minimal social interaction"
+    "entry_id": "E002", "user_id": "U01", "date": "2024-01-02",
+    "mood_score": 6, "stress_level": 5, "sleep_hours": 6.5,
+    "energy_level": 5, "anxiety_score": 4,
+    "journal": "Bit tired today. Deadlines piling up at work. Skipped lunch.",
+    "activities": ["walking"], "social_interaction": "low"
   },
   {
-    "user_id": 1,
-    "date": "2026-05-03",
-    "mood": "low",
-    "stress_level": 8,
-    "sleep_hours": 4,
-    "journal": "Could not focus today and felt emotionally drained.",
-    "activity": "isolated at home"
+    "entry_id": "E003", "user_id": "U01", "date": "2024-01-03",
+    "mood_score": 5, "stress_level": 6, "sleep_hours": 5.5,
+    "energy_level": 4, "anxiety_score": 5,
+    "journal": "Couldn't focus. Meeting went badly. Feel like I'm falling behind.",
+    "activities": [], "social_interaction": "low"
   },
   {
-    "user_id": 1,
-    "date": "2026-05-04",
-    "mood": "negative",
-    "stress_level": 9,
-    "sleep_hours": 3,
-    "journal": "Feeling mentally exhausted and disconnected.",
-    "activity": "avoided social interaction"
+    "entry_id": "E004", "user_id": "U01", "date": "2024-01-04",
+    "mood_score": 4, "stress_level": 7, "sleep_hours": 5.0,
+    "energy_level": 3, "anxiety_score": 6,
+    "journal": "Woke up at 3am and couldn't sleep again. Work feels overwhelming. Snapped at a colleague.",
+    "activities": [], "social_interaction": "low"
   },
   {
-    "user_id": 1,
-    "date": "2026-05-05",
-    "mood": "negative",
-    "stress_level": 9,
-    "sleep_hours": 4,
-    "journal": "High stress and low motivation throughout the day.",
-    "activity": "stayed indoors"
+    "entry_id": "E005", "user_id": "U01", "date": "2024-01-05",
+    "mood_score": 4, "stress_level": 8, "sleep_hours": 4.5,
+    "energy_level": 2, "anxiety_score": 7,
+    "journal": "Exhausted. Can't see the point. Everything feels like too much effort.",
+    "activities": [], "social_interaction": "none"
   },
   {
-    "user_id": 1,
-    "date": "2026-05-06",
-    "mood": "low",
-    "stress_level": 8,
-    "sleep_hours": 4,
-    "journal": "I feel stuck and unable to concentrate properly.",
-    "activity": "worked from home"
+    "entry_id": "E006", "user_id": "U01", "date": "2024-01-06",
+    "mood_score": 3, "stress_level": 8, "sleep_hours": 4.0,
+    "energy_level": 2, "anxiety_score": 8,
+    "journal": "Stayed in bed late. Missed a call from a friend. Feeling numb and detached.",
+    "activities": [], "social_interaction": "none"
+  },
+  {
+    "entry_id": "E007", "user_id": "U01", "date": "2024-01-07",
+    "mood_score": 3, "stress_level": 9, "sleep_hours": 3.5,
+    "energy_level": 1, "anxiety_score": 9,
+    "journal": "Everything feels hopeless. Can't concentrate. Don't want to talk to anyone.",
+    "activities": [], "social_interaction": "none"
+  },
+  {
+    "entry_id": "E008", "user_id": "U02", "date": "2024-01-01",
+    "mood_score": 8, "stress_level": 3, "sleep_hours": 8.0,
+    "energy_level": 8, "anxiety_score": 2,
+    "journal": "Great start to the week. Gym session felt amazing. Productive at work.",
+    "activities": ["gym", "cooking", "reading"], "social_interaction": "high"
+  },
+  {
+    "entry_id": "E009", "user_id": "U02", "date": "2024-01-02",
+    "mood_score": 7, "stress_level": 3, "sleep_hours": 7.5,
+    "energy_level": 7, "anxiety_score": 2,
+    "journal": "Good day overall. Caught up with a friend over coffee. Feeling balanced.",
+    "activities": ["walking", "social"], "social_interaction": "high"
+  },
+  {
+    "entry_id": "E010", "user_id": "U02", "date": "2024-01-03",
+    "mood_score": 7, "stress_level": 4, "sleep_hours": 7.0,
+    "energy_level": 7, "anxiety_score": 3,
+    "journal": "Slight pressure from a project deadline but managing well.",
+    "activities": ["gym"], "social_interaction": "moderate"
+  },
+  {
+    "entry_id": "E011", "user_id": "U02", "date": "2024-01-04",
+    "mood_score": 8, "stress_level": 3, "sleep_hours": 8.5,
+    "energy_level": 8, "anxiety_score": 2,
+    "journal": "Slept really well. Finished the project early. Feeling accomplished.",
+    "activities": ["gym", "reading", "cooking"], "social_interaction": "high"
+  },
+  {
+    "entry_id": "E012", "user_id": "U03", "date": "2024-01-01",
+    "mood_score": 6, "stress_level": 5, "sleep_hours": 6.0,
+    "energy_level": 5, "anxiety_score": 5,
+    "journal": "Okay day. Feel a bit anxious about upcoming presentation.",
+    "activities": ["walking"], "social_interaction": "moderate"
+  },
+  {
+    "entry_id": "E013", "user_id": "U03", "date": "2024-01-02",
+    "mood_score": 5, "stress_level": 6, "sleep_hours": 5.5,
+    "energy_level": 4, "anxiety_score": 6,
+    "journal": "Anxiety getting worse. Kept rehearsing the presentation in my head.",
+    "activities": [], "social_interaction": "low"
+  },
+  {
+    "entry_id": "E014", "user_id": "U03", "date": "2024-01-03",
+    "mood_score": 4, "stress_level": 7, "sleep_hours": 5.0,
+    "energy_level": 3, "anxiety_score": 7,
+    "journal": "Heart racing all day. Presentation tomorrow. Can't eat properly.",
+    "activities": [], "social_interaction": "none"
+  },
+  {
+    "entry_id": "E015", "user_id": "U03", "date": "2024-01-04",
+    "mood_score": 6, "stress_level": 4, "sleep_hours": 6.5,
+    "energy_level": 6, "anxiety_score": 4,
+    "journal": "Presentation went better than expected! Feeling relieved. Maybe I was overthinking.",
+    "activities": ["social", "celebration"], "social_interaction": "high"
+  },
+  {
+    "entry_id": "E016", "user_id": "U03", "date": "2024-01-05",
+    "mood_score": 7, "stress_level": 3, "sleep_hours": 7.5,
+    "energy_level": 7, "anxiety_score": 3,
+    "journal": "Much better. Stress is down. Feeling more like myself.",
+    "activities": ["exercise", "reading"], "social_interaction": "moderate"
+  },
+  {
+    "entry_id": "E017", "user_id": "U04", "date": "2024-01-01",
+    "mood_score": 5, "stress_level": 6, "sleep_hours": 6.0,
+    "energy_level": 4, "anxiety_score": 5,
+    "journal": "Work is really hectic. Managing but just barely.",
+    "activities": ["walking"], "social_interaction": "low"
+  },
+  {
+    "entry_id": "E018", "user_id": "U04", "date": "2024-01-02",
+    "mood_score": 4, "stress_level": 7, "sleep_hours": 5.5,
+    "energy_level": 3, "anxiety_score": 6,
+    "journal": "Another long day. Skipped dinner. Too tired to cook.",
+    "activities": [], "social_interaction": "none"
+  },
+  {
+    "entry_id": "E019", "user_id": "U04", "date": "2024-01-03",
+    "mood_score": 4, "stress_level": 7, "sleep_hours": 5.0,
+    "energy_level": 3, "anxiety_score": 6,
+    "journal": "Feel like a robot. Just going through motions. No joy in anything.",
+    "activities": [], "social_interaction": "none"
+  },
+  {
+    "entry_id": "E020", "user_id": "U04", "date": "2024-01-04",
+    "mood_score": 3, "stress_level": 8, "sleep_hours": 4.5,
+    "energy_level": 2, "anxiety_score": 7,
+    "journal": "Called in sick. Just couldn't face work. Crying without knowing why.",
+    "activities": [], "social_interaction": "none"
+  },
+  {
+    "entry_id": "E021", "user_id": "U04", "date": "2024-01-05",
+    "mood_score": 3, "stress_level": 8, "sleep_hours": 4.0,
+    "energy_level": 2, "anxiety_score": 8,
+    "journal": "Stayed home again. Feel ashamed but also don't care. Disconnected from everything.",
+    "activities": [], "social_interaction": "none"
+  },
+  {
+    "entry_id": "E022", "user_id": "U05", "date": "2024-01-01",
+    "mood_score": 9, "stress_level": 2, "sleep_hours": 8.5,
+    "energy_level": 9, "anxiety_score": 1,
+    "journal": "Amazing day. Went hiking. Nature always resets me.",
+    "activities": ["hiking", "cooking", "meditation"], "social_interaction": "high"
+  },
+  {
+    "entry_id": "E023", "user_id": "U05", "date": "2024-01-02",
+    "mood_score": 8, "stress_level": 2, "sleep_hours": 8.0,
+    "energy_level": 8, "anxiety_score": 1,
+    "journal": "Productive and calm. Meditation really helping lately.",
+    "activities": ["meditation", "reading", "gym"], "social_interaction": "moderate"
+  },
+  {
+    "entry_id": "E024", "user_id": "U05", "date": "2024-01-03",
+    "mood_score": 8, "stress_level": 3, "sleep_hours": 7.5,
+    "energy_level": 8, "anxiety_score": 2,
+    "journal": "Small setback at work but handled it well. Proud of my reaction.",
+    "activities": ["gym", "journaling"], "social_interaction": "moderate"
+  },
+  {
+    "entry_id": "E025", "user_id": "U05", "date": "2024-01-04",
+    "mood_score": 9, "stress_level": 2, "sleep_hours": 8.0,
+    "energy_level": 9, "anxiety_score": 1,
+    "journal": "Called family. Feeling loved and supported. Life is good.",
+    "activities": ["social", "cooking", "meditation"], "social_interaction": "high"
+  },
+  {
+    "entry_id": "E026", "user_id": "U01", "date": "2024-01-08",
+    "mood_score": 3, "stress_level": 9, "sleep_hours": 3.0,
+    "energy_level": 1, "anxiety_score": 9,
+    "journal": "Week 2 and still feeling terrible. Doctor said I should rest but I can't switch off.",
+    "activities": [], "social_interaction": "none"
+  },
+  {
+    "entry_id": "E027", "user_id": "U01", "date": "2024-01-09",
+    "mood_score": 4, "stress_level": 8, "sleep_hours": 4.5,
+    "energy_level": 2, "anxiety_score": 8,
+    "journal": "Tried to go for a walk. Made it 10 minutes. Felt dizzy and came back.",
+    "activities": ["walking"], "social_interaction": "none"
+  },
+  {
+    "entry_id": "E028", "user_id": "U01", "date": "2024-01-10",
+    "mood_score": 4, "stress_level": 7, "sleep_hours": 5.0,
+    "energy_level": 3, "anxiety_score": 7,
+    "journal": "Slight improvement. Ate a proper meal. Talked to my sister briefly.",
+    "activities": ["social"], "social_interaction": "low"
+  },
+  {
+    "entry_id": "E029", "user_id": "U06", "date": "2024-01-01",
+    "mood_score": 5, "stress_level": 7, "sleep_hours": 5.5,
+    "energy_level": 4, "anxiety_score": 6,
+    "journal": "New job is intense. Imposter syndrome hitting hard.",
+    "activities": ["reading"], "social_interaction": "low"
+  },
+  {
+    "entry_id": "E030", "user_id": "U06", "date": "2024-01-02",
+    "mood_score": 4, "stress_level": 7, "sleep_hours": 5.0,
+    "energy_level": 3, "anxiety_score": 7,
+    "journal": "Made a mistake at work. Keep replaying it. Can't let it go.",
+    "activities": [], "social_interaction": "none"
+  },
+  {
+    "entry_id": "E031", "user_id": "U06", "date": "2024-01-03",
+    "mood_score": 4, "stress_level": 8, "sleep_hours": 4.5,
+    "energy_level": 3, "anxiety_score": 7,
+    "journal": "Anxiety about being judged. Avoiding team meetings when possible.",
+    "activities": [], "social_interaction": "none"
+  },
+  {
+    "entry_id": "E032", "user_id": "U06", "date": "2024-01-04",
+    "mood_score": 5, "stress_level": 6, "sleep_hours": 6.0,
+    "energy_level": 4, "anxiety_score": 6,
+    "journal": "Manager gave positive feedback. Small boost. Still uncertain.",
+    "activities": ["walking"], "social_interaction": "low"
+  },
+  {
+    "entry_id": "E033", "user_id": "U06", "date": "2024-01-05",
+    "mood_score": 6, "stress_level": 5, "sleep_hours": 6.5,
+    "energy_level": 5, "anxiety_score": 5,
+    "journal": "Better day. Joined team lunch. People seem friendly.",
+    "activities": ["social", "walking"], "social_interaction": "moderate"
+  },
+  {
+    "entry_id": "E034", "user_id": "U07", "date": "2024-01-01",
+    "mood_score": 2, "stress_level": 9, "sleep_hours": 3.0,
+    "energy_level": 1, "anxiety_score": 9,
+    "journal": "Can't do this anymore. Everything is falling apart. No one understands.",
+    "activities": [], "social_interaction": "none"
+  },
+  {
+    "entry_id": "E035", "user_id": "U07", "date": "2024-01-02",
+    "mood_score": 2, "stress_level": 10, "sleep_hours": 2.5,
+    "energy_level": 1, "anxiety_score": 10,
+    "journal": "Worst day in months. Feel completely alone. What's the point.",
+    "activities": [], "social_interaction": "none"
+  },
+  {
+    "entry_id": "E036", "user_id": "U07", "date": "2024-01-03",
+    "mood_score": 3, "stress_level": 9, "sleep_hours": 3.5,
+    "energy_level": 1, "anxiety_score": 9,
+    "journal": "Called a helpline last night. It helped a little. Trying to hold on.",
+    "activities": [], "social_interaction": "low"
+  },
+  {
+    "entry_id": "E037", "user_id": "U07", "date": "2024-01-04",
+    "mood_score": 3, "stress_level": 8, "sleep_hours": 4.0,
+    "energy_level": 2, "anxiety_score": 8,
+    "journal": "Saw a therapist today. First session. Felt understood for the first time in weeks.",
+    "activities": ["therapy"], "social_interaction": "low"
+  },
+  {
+    "entry_id": "E038", "user_id": "U08", "date": "2024-01-01",
+    "mood_score": 6, "stress_level": 5, "sleep_hours": 7.0,
+    "energy_level": 6, "anxiety_score": 4,
+    "journal": "Average week. Nothing spectacular but nothing terrible.",
+    "activities": ["reading", "cooking"], "social_interaction": "moderate"
+  },
+  {
+    "entry_id": "E039", "user_id": "U08", "date": "2024-01-03",
+    "mood_score": 7, "stress_level": 4, "sleep_hours": 7.5,
+    "energy_level": 7, "anxiety_score": 3,
+    "journal": "Finished a book I loved. Feeling inspired and calm.",
+    "activities": ["reading", "walking", "cooking"], "social_interaction": "moderate"
+  },
+  {
+    "entry_id": "E040", "user_id": "U08", "date": "2024-01-05",
+    "mood_score": 7, "stress_level": 4, "sleep_hours": 7.0,
+    "energy_level": 7, "anxiety_score": 3,
+    "journal": "Consistent week. Work-life balance feels manageable. Grateful for small things.",
+    "activities": ["exercise", "social", "journaling"], "social_interaction": "high"
   }
 ]
